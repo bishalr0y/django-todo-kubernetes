@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: django-todo
+  labels:
+    name: django-todo
+spec:
+  containers:
+  - name: django-todo
+    image: bishalr0y/my-app:django-todo
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8000
