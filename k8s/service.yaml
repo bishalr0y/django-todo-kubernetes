@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: django-todo-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: django-todo
+  ports:
+  - port: 80
+    targetPort: 8000
+    nodePort: 30000
