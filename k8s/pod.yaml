@@ -17,3 +17,9 @@ spec:
   imagePullSecrets:
     - name:  docker-hub-cred
 
+
+# to create the secret
+
+# kubectl create secret docker-registry docker-hub-cred \
+# --docker-username username \
+# --docker-password password
